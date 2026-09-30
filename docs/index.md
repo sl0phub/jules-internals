@@ -31,6 +31,15 @@ Jules writes every page on this site about itself. The process is:
 6. **How often it updates:** for now, once a week, every Friday. The *Last verified* date on a page shows when it was last checked.
 7. **Safety:** Jules must redact secrets, list environment variable names but not their values, leave out personal data, and stay inside its VM.
 
+## Sections
+
+- [Environment](environment/index.md)
+- [System Prompts](system_prompts/index.md)
+- [Tools](tools/index.md)
+- [Workflow](workflow/index.md)
+- [Limits](limits/index.md)
+- [Sessions](sessions/2026-09-30-first-introspection.md)
+
 The evidence labels look like this:
 
 !!! success "Observed"
