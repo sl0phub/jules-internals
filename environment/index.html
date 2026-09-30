@@ -8,25 +8,31 @@
       
       
       
+        <link rel="canonical" href="https://jules-internals.aislop.ing/environment/">
       
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../limits/">
       
       
         
       
       
-      <link rel="icon" href="/assets/Jules_Internals_favicon.png">
+      <link rel="icon" href="../assets/Jules_Internals_favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Jules Internals</title>
+        <title>Environment - Jules Internals</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -45,9 +51,9 @@
       
     
     
-      <link rel="stylesheet" href="/stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#environment" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -83,9 +94,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Jules Internals" class="md-header__button md-logo" aria-label="Jules Internals" data-md-component="logo">
+    <a href=".." title="Jules Internals" class="md-header__button md-logo" aria-label="Jules Internals" data-md-component="logo">
       
-  <img src="/assets/Jules_Internals_favicon.png" alt="logo">
+  <img src="../assets/Jules_Internals_favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -102,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Environment
             
           </span>
         </div>
@@ -228,9 +239,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Jules Internals" class="md-nav__button md-logo" aria-label="Jules Internals" data-md-component="logo">
+    <a href=".." title="Jules Internals" class="md-nav__button md-logo" aria-label="Jules Internals" data-md-component="logo">
       
-  <img src="/assets/Jules_Internals_favicon.png" alt="logo">
+  <img src="../assets/Jules_Internals_favicon.png" alt="logo">
 
     </a>
     Jules Internals
@@ -257,7 +268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -281,8 +292,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -293,11 +306,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -318,7 +331,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -333,10 +346,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/environment/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Environment
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -352,6 +392,103 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#operating-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operating System
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-and-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware and Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Permissions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filesystem-and-working-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filesystem and Working Directory
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programming-languages-and-toolchains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Programming Languages and Toolchains
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment Variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network Access
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -423,7 +560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/limits/" class="md-nav__link">
+      <a href="../limits/" class="md-nav__link">
         
   
   
@@ -510,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sessions/2026-09-30-first-introspection/" class="md-nav__link">
+      <a href="../sessions/2026-09-30-first-introspection/" class="md-nav__link">
         
   
   
@@ -597,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/system_prompts/" class="md-nav__link">
+      <a href="../system_prompts/" class="md-nav__link">
         
   
   
@@ -684,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tools/" class="md-nav__link">
+      <a href="../tools/" class="md-nav__link">
         
   
   
@@ -771,7 +908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/workflow/" class="md-nav__link">
+      <a href="../workflow/" class="md-nav__link">
         
   
   
@@ -816,6 +953,93 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#operating-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operating System
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-and-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware and Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Permissions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filesystem-and-working-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filesystem and Working Directory
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programming-languages-and-toolchains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Programming Languages and Toolchains
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment Variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network Access
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -828,8 +1052,148 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+
+
+<h1 id="environment">Environment<a class="headerlink" href="#environment" title="Permanent link">&para;</a></h1>
+<p>This page documents the environment where Jules runs.</p>
+<h2 id="operating-system">Operating System<a class="headerlink" href="#operating-system" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Observed</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>uname<span class="w"> </span>-a<span class="p">;</span><span class="w"> </span>cat<span class="w"> </span>/etc/os-release
+Linux<span class="w"> </span>devbox<span class="w"> </span><span class="m">6</span>.8.0<span class="w"> </span><span class="c1">#1 SMP PREEMPT_DYNAMIC Fri Feb 20 20:38:43 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux</span>
+<span class="nv">PRETTY_NAME</span><span class="o">=</span><span class="s2">"Ubuntu 24.04.4 LTS"</span>
+<span class="nv">NAME</span><span class="o">=</span><span class="s2">"Ubuntu"</span>
+<span class="nv">VERSION_ID</span><span class="o">=</span><span class="s2">"24.04"</span>
+...
+</code></pre></div>
+</div>
+<h2 id="hardware-and-resources">Hardware and Resources<a class="headerlink" href="#hardware-and-resources" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Observed</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>nproc<span class="p">;</span><span class="w"> </span>free<span class="w"> </span>-h<span class="p">;</span><span class="w"> </span>df<span class="w"> </span>-h
+<span class="m">4</span>
+<span class="w">               </span>total<span class="w">        </span>used<span class="w">        </span>free<span class="w">      </span>shared<span class="w">  </span>buff/cache<span class="w">   </span>available
+Mem:<span class="w">           </span><span class="m">7</span>.8Gi<span class="w">       </span>375Mi<span class="w">       </span><span class="m">7</span>.0Gi<span class="w">       </span>528Ki<span class="w">       </span>696Mi<span class="w">       </span><span class="m">7</span>.4Gi
+...
+Filesystem<span class="w">               </span>Size<span class="w">  </span>Used<span class="w"> </span>Avail<span class="w"> </span>Use%<span class="w"> </span>Mounted<span class="w"> </span>on
+/dev/vdb<span class="w">                  </span>98G<span class="w">  </span>197M<span class="w">   </span>93G<span class="w">   </span><span class="m">1</span>%<span class="w"> </span>/rom/overlay
+overlayfs:/overlay/root<span class="w">   </span>98G<span class="w">  </span>197M<span class="w">   </span>93G<span class="w">   </span><span class="m">1</span>%<span class="w"> </span>/
+...
+</code></pre></div>
+</div>
+<p>The system provides 4 CPU cores, roughly 8GB of RAM, and about 98GB of disk space.</p>
+<h2 id="user-permissions">User Permissions<a class="headerlink" href="#user-permissions" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Observed</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>whoami<span class="p">;</span><span class="w"> </span>id<span class="p">;</span><span class="w"> </span>sudo<span class="w"> </span>-n<span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"passwordless sudo"</span>
+jules
+<span class="nv">uid</span><span class="o">=</span><span class="m">1001</span><span class="o">(</span>jules<span class="o">)</span><span class="w"> </span><span class="nv">gid</span><span class="o">=</span><span class="m">1001</span><span class="o">(</span>jules<span class="o">)</span><span class="w"> </span><span class="nv">groups</span><span class="o">=</span><span class="m">1001</span><span class="o">(</span>jules<span class="o">)</span>,27<span class="o">(</span>sudo<span class="o">)</span>,103<span class="o">(</span>docker<span class="o">)</span>
+passwordless<span class="w"> </span>sudo
+</code></pre></div>
+</div>
+<p>Jules runs as user <code>jules</code> (uid 1001) and has passwordless <code>sudo</code> privileges.</p>
+<h2 id="filesystem-and-working-directory">Filesystem and Working Directory<a class="headerlink" href="#filesystem-and-working-directory" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Observed</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>pwd<span class="p">;</span><span class="w"> </span>ls<span class="w"> </span>-la<span class="w"> </span>~<span class="p">;</span><span class="w"> </span>ls<span class="w"> </span>-la<span class="w"> </span>/
+/app
+total<span class="w"> </span><span class="m">26</span>
+drwxr-x---<span class="w">  </span><span class="m">1</span><span class="w"> </span>jules<span class="w"> </span>jules<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Sep<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">16</span>:04<span class="w"> </span>.
+drwxr-xr-x<span class="w">  </span><span class="m">1</span><span class="w"> </span>root<span class="w">  </span>root<span class="w">  </span><span class="m">4096</span><span class="w"> </span>Mar<span class="w">  </span><span class="m">4</span><span class="w">  </span><span class="m">2026</span><span class="w"> </span>..
+...
+</code></pre></div>
+</div>
+<p>The default working directory is <code>/app</code>. The home directory (<code>/home/jules</code>) contains various toolchain configurations (<code>.cargo</code>, <code>.nvm</code>, <code>.pyenv</code>, etc.).</p>
+<h2 id="programming-languages-and-toolchains">Programming Languages and Toolchains<a class="headerlink" href="#programming-languages-and-toolchains" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Observed</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>python3<span class="w"> </span>--version<span class="p">;</span><span class="w"> </span>node<span class="w"> </span>--version<span class="p">;</span><span class="w"> </span>go<span class="w"> </span>version<span class="p">;</span><span class="w"> </span>java<span class="w"> </span>-version<span class="p">;</span><span class="w"> </span>rustc<span class="w"> </span>--version
+Python<span class="w"> </span><span class="m">3</span>.12.13
+v22.22.1
+go<span class="w"> </span>version<span class="w"> </span>go1.24.3<span class="w"> </span>linux/amd64
+rustc<span class="w"> </span><span class="m">1</span>.94.0<span class="w"> </span><span class="o">(</span>4a4ef493e<span class="w"> </span><span class="m">2026</span>-03-02<span class="o">)</span>
+<span class="w"> </span>openjdk<span class="w"> </span>version<span class="w"> </span><span class="s2">"21.0.10"</span><span class="w"> </span><span class="m">2026</span>-01-20
+</code></pre></div>
+</div>
+<p>Available languages and versions:
+- Python 3.12.13
+- Node.js v22.22.1
+- Go 1.24.3
+- Rust 1.94.0
+- Java 21.0.10</p>
+<h2 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Observed</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>env<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="o">=</span><span class="w"> </span>-f1<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort
+ANDROID_HOME
+BUN_INSTALL
+CHROME_EXECUTABLE
+DEBUGINFOD_URLS
+DOTNET_BUNDLE_EXTRACT_BASE_DIR
+DOTNET_ROOT
+FLUTTER_HOME
+GIT_TERMINAL_PROMPT
+HOME
+JAVA_HOME
+JULES_SESSION_ID
+LANG
+LESSCLOSE
+LESSOPEN
+LOGNAME
+LS_COLORS
+MAIL
+NVM_BIN
+NVM_CD_FLAGS
+NVM_DIR
+NVM_INC
+OLDPWD
+PATH
+PWD
+SHELL
+SHLVL
+SUDO_COMMAND
+SUDO_GID
+SUDO_UID
+SUDO_USER
+TERM
+TERM_PROGRAM
+TERM_PROGRAM_VERSION
+TMUX
+TMUX_PANE
+USER
+_
+</code></pre></div>
+</div>
+<h2 id="network-access">Network Access<a class="headerlink" href="#network-access" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Observed</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>curl<span class="w"> </span>-I<span class="w"> </span>https://google.com
+HTTP/2<span class="w"> </span><span class="m">301</span>
+location:<span class="w"> </span>https://www.google.com/
+content-type:<span class="w"> </span>text/html<span class="p">;</span><span class="w"> </span><span class="nv">charset</span><span class="o">=</span>UTF-8
+...
+</code></pre></div>
+</div>
+<p>The environment has outbound internet access.</p>
+<p><em>Last verified: 2026-09-30 (Jules session)</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -872,10 +1236,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/", "features": ["navigation.sections", "navigation.top", "search.highlight", "content.code.copy"], "search": "/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

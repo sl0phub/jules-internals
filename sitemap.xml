@@ -4,4 +4,28 @@
          <loc>https://jules-internals.aislop.ing/</loc>
          <lastmod>2026-09-30</lastmod>
     </url>
+    <url>
+         <loc>https://jules-internals.aislop.ing/environment/</loc>
+         <lastmod>2026-09-30</lastmod>
+    </url>
+    <url>
+         <loc>https://jules-internals.aislop.ing/limits/</loc>
+         <lastmod>2026-09-30</lastmod>
+    </url>
+    <url>
+         <loc>https://jules-internals.aislop.ing/sessions/2026-09-30-first-introspection/</loc>
+         <lastmod>2026-09-30</lastmod>
+    </url>
+    <url>
+         <loc>https://jules-internals.aislop.ing/system_prompts/</loc>
+         <lastmod>2026-09-30</lastmod>
+    </url>
+    <url>
+         <loc>https://jules-internals.aislop.ing/tools/</loc>
+         <lastmod>2026-09-30</lastmod>
+    </url>
+    <url>
+         <loc>https://jules-internals.aislop.ing/workflow/</loc>
+         <lastmod>2026-09-30</lastmod>
+    </url>
 </urlset>

@@ -8,25 +8,31 @@
       
       
       
+        <link rel="canonical" href="https://jules-internals.aislop.ing/limits/">
       
+      
+        <link rel="prev" href="../environment/">
+      
+      
+        <link rel="next" href="../sessions/2026-09-30-first-introspection/">
       
       
         
       
       
-      <link rel="icon" href="/assets/Jules_Internals_favicon.png">
+      <link rel="icon" href="../assets/Jules_Internals_favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Jules Internals</title>
+        <title>Limits - Jules Internals</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -45,9 +51,9 @@
       
     
     
-      <link rel="stylesheet" href="/stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#limits" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -83,9 +94,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Jules Internals" class="md-header__button md-logo" aria-label="Jules Internals" data-md-component="logo">
+    <a href=".." title="Jules Internals" class="md-header__button md-logo" aria-label="Jules Internals" data-md-component="logo">
       
-  <img src="/assets/Jules_Internals_favicon.png" alt="logo">
+  <img src="../assets/Jules_Internals_favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -102,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Limits
             
           </span>
         </div>
@@ -228,9 +239,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Jules Internals" class="md-nav__button md-logo" aria-label="Jules Internals" data-md-component="logo">
+    <a href=".." title="Jules Internals" class="md-nav__button md-logo" aria-label="Jules Internals" data-md-component="logo">
       
-  <img src="/assets/Jules_Internals_favicon.png" alt="logo">
+  <img src="../assets/Jules_Internals_favicon.png" alt="logo">
 
     </a>
     Jules Internals
@@ -257,7 +268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -336,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/environment/" class="md-nav__link">
+      <a href="../environment/" class="md-nav__link">
         
   
   
@@ -368,8 +379,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -380,11 +393,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -405,7 +418,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -420,10 +433,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/limits/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Limits
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -439,6 +479,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#context-and-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Context and Actions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-size-and-command-length" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Size and Command Length
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -510,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sessions/2026-09-30-first-introspection/" class="md-nav__link">
+      <a href="../sessions/2026-09-30-first-introspection/" class="md-nav__link">
         
   
   
@@ -597,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/system_prompts/" class="md-nav__link">
+      <a href="../system_prompts/" class="md-nav__link">
         
   
   
@@ -684,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tools/" class="md-nav__link">
+      <a href="../tools/" class="md-nav__link">
         
   
   
@@ -771,7 +853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/workflow/" class="md-nav__link">
+      <a href="../workflow/" class="md-nav__link">
         
   
   
@@ -816,6 +898,38 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#context-and-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Context and Actions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-size-and-command-length" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Size and Command Length
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -828,8 +942,43 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+
+
+<h1 id="limits">Limits<a class="headerlink" href="#limits" title="Permanent link">&para;</a></h1>
+<p>This page documents the known limits and constraints of Jules.</p>
+<h2 id="context-and-actions">Context and Actions<a class="headerlink" href="#context-and-actions" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Inferred</p>
+<ul>
+<li><strong>No Direct Internet Execution in Sandbox</strong>: While outgoing network requests (<code>curl</code>, <code>google_search</code>, <code>view_text_website</code>) work, Jules must be cautious about environment limits and long-running processes (which should be backgrounded using <code>&amp;</code>).</li>
+<li><strong>Artifact Avoidance</strong>: Jules should edit source files rather than built artifacts (like files in <code>dist</code> or <code>build</code>).</li>
+<li><strong>Safe Scope</strong>: Jules strictly avoids fulfilling unsafe or malicious requests, remaining inside the VM and honoring safety guidelines.</li>
+</ul>
+</div>
+<h2 id="file-size-and-command-length">File Size and Command Length<a class="headerlink" href="#file-size-and-command-length" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Self-reported</p>
+<p>Output from bash commands can be extremely long, making it necessary to trim or filter large outputs (e.g., using <code>head</code>, <code>grep</code>, or <code>cut</code>) to avoid cluttering the response and exceeding limits.</p>
+</div>
+<p><em>Last verified: 2026-09-30 (Jules session)</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -872,10 +1021,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/", "features": ["navigation.sections", "navigation.top", "search.highlight", "content.code.copy"], "search": "/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
