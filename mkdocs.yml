@@ -1,6 +1,6 @@
 site_name: Jules Internals
-site_url: https://docs.example.com/
+site_url: https://jules-internals.aislop.ing/
 repo_url: https://github.com/sl0phub/jules-internals
 
-nav:
-  - Home: index.md
+# No nav: block -- MkDocs builds navigation from the docs/ tree, so Jules can
+# add pages without touching this file (which it is not allowed to change).

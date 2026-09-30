@@ -1,0 +1,127 @@
+name: Auto-merge Jules docs PRs
+
+# This is the trust boundary. validate-docs.yml is not.
+#
+# `on: workflow_run` always runs the copy of this file on the default branch, so
+# nothing a pull request contains can change it. The invariant to preserve when
+# editing: this workflow must never check out, execute, or source anything from
+# the pull request. It reads the PR's commits as data -- git fetch and git diff --
+# and runs code only from main.
+#
+# Jules may only change docs/**/*.md. Any Jules PR touching anything else fails
+# the path guard and stays open for the owner or a collaborator to review.
+
+on:
+  workflow_run:
+    workflows: ["Validate docs"]
+    types: [completed]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: jules-automerge-${{ github.event.workflow_run.head_sha }}
+  cancel-in-progress: false
+
+jobs:
+  merge:
+    # head_repository check keeps fork pull requests out.
+    if: >-
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.head_repository.full_name == github.repository
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      actions: write
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      REPO: ${{ github.repository }}
+      HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+      ACTOR: ${{ github.event.workflow_run.actor.login }}
+      JULES: google-labs-jules[bot]
+    steps:
+      # main only. Never the pull request.
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      # Resolved from the API by head SHA, not read from anything the triggering
+      # run produced -- a workflow_run job must not trust the run it follows.
+      - id: pr
+        name: Resolve the pull request
+        run: |
+          set -euo pipefail
+          pr=$(gh pr list --repo "$REPO" --state open --base main \
+                 --json number,headRefOid,author \
+                 --jq "[.[] | select(.headRefOid == \"$HEAD_SHA\")] | .[0] // empty")
+          if [ -z "$pr" ]; then
+            echo "No open PR whose head is $HEAD_SHA; nothing to merge."
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "number=$(jq -r .number <<<"$pr")" >> "$GITHUB_OUTPUT"
+          echo "author=$(jq -r .author.login <<<"$pr")" >> "$GITHUB_OUTPUT"
+          echo "found=true" >> "$GITHUB_OUTPUT"
+
+      # Only Jules's own PRs auto-merge. Everything else is for a human.
+      # The gh API reports app authors as "app/<slug>", so accept both spellings.
+      - id: actor
+        name: Only Jules pull requests auto-merge
+        if: steps.pr.outputs.found == 'true'
+        env:
+          AUTHOR: ${{ steps.pr.outputs.author }}
+        run: |
+          set -euo pipefail
+          if [ "$ACTOR" != "$JULES" ]; then
+            echo "Triggered by '$ACTOR', not Jules; leaving PR for a human."
+            echo "ok=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          case "$AUTHOR" in
+            "google-labs-jules[bot]"|"app/google-labs-jules") ;;
+            *)
+              echo "PR author '$AUTHOR' is not Jules; leaving PR for a human."
+              echo "ok=false" >> "$GITHUB_OUTPUT"; exit 0
+              ;;
+          esac
+          echo "ok=true" >> "$GITHUB_OUTPUT"
+
+      - name: Fetch the pull request's commits
+        if: steps.actor.outputs.ok == 'true'
+        run: |
+          set -euo pipefail
+          # Fetching and diffing commits does not execute anything from them.
+          git fetch --no-tags origin "+$HEAD_SHA:refs/pr-head"
+          git rev-parse --verify refs/pr-head
+
+      # The check that matters: main's allowlist against the PR's diff.
+      - name: Path allowlist (docs/**/*.md only)
+        if: steps.actor.outputs.ok == 'true'
+        run: |
+          set -euo pipefail
+          changed=$(git diff --name-only --no-renames origin/main...refs/pr-head)
+          if [ -z "$changed" ]; then
+            echo "PR changes no files; not merging."
+            exit 1
+          fi
+          echo "Changed files:"; echo "$changed"
+          bad=$(grep -Ev '^docs/.+\.md$' <<<"$changed" || true)
+          if [ -n "$bad" ]; then
+            echo "::error::Jules may only change docs/**/*.md. Not allowed:"
+            echo "$bad"
+            exit 1
+          fi
+
+      - name: Merge
+        if: steps.actor.outputs.ok == 'true'
+        run: |
+          gh pr merge "${{ steps.pr.outputs.number }}" --repo "$REPO" \
+            --squash --delete-branch --match-head-commit "$HEAD_SHA"
+
+      # A merge made with GITHUB_TOKEN does not raise a push event, so docs.yml
+      # would never fire. workflow_dispatch is exempt, so trigger it explicitly.
+      - name: Trigger the Pages deploy
+        if: steps.actor.outputs.ok == 'true'
+        run: gh workflow run docs.yml --ref main --repo "$REPO"
