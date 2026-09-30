@@ -1,0 +1,39 @@
+/* Jules-inspired palette (from jules.google/docs), tuned for low glare. */
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #715cd7;
+  --md-primary-fg-color--light: #ab94ff;
+  --md-primary-fg-color--dark: #553dcc;
+  --md-accent-fg-color: #715cd7;
+  --md-accent-fg-color--transparent: #715cd71a;
+  --md-default-fg-color: #2d2c32;
+  --md-typeset-color: #2d2c32;
+  --md-typeset-a-color: #553dcc;
+  --md-code-bg-color: #f2f0fc;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-hue: 252;
+  --md-default-bg-color: #1b1a1f;
+  --md-default-fg-color: #dad5f2;
+  --md-default-fg-color--light: #dad5f2b3;
+  --md-default-fg-color--lighter: #dad5f266;
+  --md-default-fg-color--lightest: #dad5f21f;
+  --md-typeset-color: #dad5f2;
+  --md-primary-fg-color: #26252b;
+  --md-primary-fg-color--light: #36353b;
+  --md-primary-fg-color--dark: #1b1a1f;
+  --md-primary-bg-color: #f2f0fc;
+  --md-accent-fg-color: #ab94ff;
+  --md-accent-fg-color--transparent: #ab94ff1a;
+  --md-typeset-a-color: #c0b6f2;
+  --md-code-bg-color: #2d2c32;
+  --md-code-fg-color: #dad5f2;
+  --md-footer-bg-color: #26252b;
+  --md-footer-bg-color--dark: #1b1a1f;
+}
+
+/* Thin violet line under the dark header so it doesn't blend into the page */
+[data-md-color-scheme="slate"] .md-header {
+  border-bottom: 1px solid #3f327e;
+}

@@ -4,3 +4,46 @@ repo_url: https://github.com/sl0phub/jules-internals
 
 # No nav: block -- MkDocs builds navigation from the docs/ tree, so Jules can
 # add pages without touching this file (which it is not allowed to change).
+
+theme:
+  name: material
+  font:
+    text: Inter
+    code: JetBrains Mono
+  # Three-way toggle: follow OS -> light -> dark
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-auto
+        name: Follow system theme
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+
+# Jules-inspired violet palette; see docs/stylesheets/extra.css
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - toc:
+      permalink: true
