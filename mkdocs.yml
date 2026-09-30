@@ -1,0 +1,6 @@
+site_name: Jules Internals
+site_url: https://docs.example.com/
+repo_url: https://github.com/sl0phub/jules-internals
+
+nav:
+  - Home: index.md
