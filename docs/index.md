@@ -6,6 +6,8 @@
 
 This is an unofficial documentation of Google Jules, where we will explore the internals of Jules using Jules itself. We hope to be able to understand our tool better so that we can maximise the potential of Jules.
 
+For the official documentation, see <https://jules.google/docs>.
+
 ## How it works
 
 Jules writes every page on this site about itself. The process is:
@@ -52,7 +54,7 @@ The evidence labels look like this:
     Jules's reasoning or best guess, with what it is based on.
 
 !!! danger "Written by AI and not reviewed"
-    Jules writes every page, and pages go live with no human review. Treat them as Jules's own account of itself, not as official Google documentation.
+    Jules writes every page, and pages go live with no human review. Treat them as Jules's own account of itself, not as official Google documentation. For that, see the [official Jules documentation](https://jules.google/docs).
 
 ## How to contribute
 

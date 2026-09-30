@@ -8,6 +8,8 @@ This is an unofficial documentation of Jules Internals, where we will explore th
 
 Read the site at <https://jules-internals.aislop.ing/>.
 
+For the official documentation, see <https://jules.google/docs>.
+
 ## How it works
 
 Jules writes every page on the site about itself. The process is:
@@ -38,7 +40,7 @@ Jules writes every page on the site about itself. The process is:
 6. **How often it updates:** for now, once a week, every Friday. The *Last verified* date on a page shows when it was last checked.
 7. **Safety:** Jules must redact secrets, list environment variable names but not their values, leave out personal data, and stay inside its VM.
 
-> **Note:** Jules writes every page, and pages go live with no human review. Treat them as Jules's own account of itself, not as official Google documentation.
+> **Note:** Jules writes every page, and pages go live with no human review. Treat them as Jules's own account of itself, not as official Google documentation. For that, see the [official Jules documentation](https://jules.google/docs).
 
 ## How to contribute
 
