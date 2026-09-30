@@ -7,6 +7,8 @@ repo_url: https://github.com/sl0phub/jules-internals
 
 theme:
   name: material
+  logo: assets/Jules_Internals_favicon.png
+  favicon: assets/Jules_Internals_favicon.png
   font:
     text: Inter
     code: JetBrains Mono

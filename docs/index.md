@@ -1,17 +1,7 @@
-# Welcome to MkDocs
+<p align="center">
+  <img src="assets/Jules_Internals_Readme_Logo.jpg" alt="Jules Internals logo" >
+</p>
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# Welcome to Jules Internals
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+This is an unofficial documentation of Jules Internals, where we will explore the internals of Jules using Jules itself. We hope to be able to understand our tool better so that we can maximise the potential of Jules.
