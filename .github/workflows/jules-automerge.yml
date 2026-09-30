@@ -10,6 +10,13 @@ name: Auto-merge Jules docs PRs
 #
 # Jules may only change docs/**/*.md. Any Jules PR touching anything else fails
 # the path guard and stays open for the owner or a collaborator to review.
+#
+# Identity: Jules pushes the branch and opens the PR through the GitHub account
+# that connected it (PIPELINE_ACCOUNT), so both the workflow_run actor and the PR
+# author are that account, not google-labs-jules[bot]. Only the commits carry the
+# bot identity. So the actor/author check accepts the pipeline account, and a
+# separate step requires every commit to be authored and committed by the bot --
+# that is what keeps the owner's own hand-written PRs out of auto-merge.
 
 on:
   workflow_run:
@@ -41,6 +48,9 @@ jobs:
       HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
       ACTOR: ${{ github.event.workflow_run.actor.login }}
       JULES: google-labs-jules[bot]
+      JULES_EMAIL: 161369871+google-labs-jules[bot]@users.noreply.github.com
+      # The account Jules acts through (see header).
+      PIPELINE_ACCOUNT: sl0phub
     steps:
       # main only. Never the pull request.
       - uses: actions/checkout@v5
@@ -68,6 +78,7 @@ jobs:
 
       # Only Jules's own PRs auto-merge. Everything else is for a human.
       # The gh API reports app authors as "app/<slug>", so accept both spellings.
+      # Quoted so the [bot] suffix is matched literally, not as a glob class.
       - id: actor
         name: Only Jules pull requests auto-merge
         if: steps.pr.outputs.found == 'true'
@@ -75,12 +86,15 @@ jobs:
           AUTHOR: ${{ steps.pr.outputs.author }}
         run: |
           set -euo pipefail
-          if [ "$ACTOR" != "$JULES" ]; then
-            echo "Triggered by '$ACTOR', not Jules; leaving PR for a human."
-            echo "ok=false" >> "$GITHUB_OUTPUT"; exit 0
-          fi
+          case "$ACTOR" in
+            "$JULES"|"$PIPELINE_ACCOUNT") ;;
+            *)
+              echo "Triggered by '$ACTOR', not Jules; leaving PR for a human."
+              echo "ok=false" >> "$GITHUB_OUTPUT"; exit 0
+              ;;
+          esac
           case "$AUTHOR" in
-            "google-labs-jules[bot]"|"app/google-labs-jules") ;;
+            "$JULES"|"app/google-labs-jules"|"$PIPELINE_ACCOUNT") ;;
             *)
               echo "PR author '$AUTHOR' is not Jules; leaving PR for a human."
               echo "ok=false" >> "$GITHUB_OUTPUT"; exit 0
@@ -96,9 +110,29 @@ jobs:
           git fetch --no-tags origin "+$HEAD_SHA:refs/pr-head"
           git rev-parse --verify refs/pr-head
 
+      # PIPELINE_ACCOUNT is also the owner, so the actor check alone would let
+      # the owner's own PRs through. Require every commit to be Jules's.
+      - id: commits
+        name: Every commit is authored by Jules
+        if: steps.actor.outputs.ok == 'true'
+        run: |
+          set -euo pipefail
+          log=$(git log --format='%H %ae %ce' origin/main..refs/pr-head)
+          if [ -z "$log" ]; then
+            echo "PR has no commits ahead of main; not merging."
+            echo "ok=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          bad=$(awk -v e="$JULES_EMAIL" '$2 != e || $3 != e' <<<"$log")
+          if [ -n "$bad" ]; then
+            echo "Commits not authored and committed by Jules; leaving PR for a human:"
+            echo "$bad"
+            echo "ok=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          echo "ok=true" >> "$GITHUB_OUTPUT"
+
       # The check that matters: main's allowlist against the PR's diff.
       - name: Path allowlist (docs/**/*.md only)
-        if: steps.actor.outputs.ok == 'true'
+        if: steps.commits.outputs.ok == 'true'
         run: |
           set -euo pipefail
           changed=$(git diff --name-only --no-renames origin/main...refs/pr-head)
@@ -115,7 +149,7 @@ jobs:
           fi
 
       - name: Merge
-        if: steps.actor.outputs.ok == 'true'
+        if: steps.commits.outputs.ok == 'true'
         run: |
           gh pr merge "${{ steps.pr.outputs.number }}" --repo "$REPO" \
             --squash --delete-branch --match-head-commit "$HEAD_SHA"
@@ -123,5 +157,5 @@ jobs:
       # A merge made with GITHUB_TOKEN does not raise a push event, so docs.yml
       # would never fire. workflow_dispatch is exempt, so trigger it explicitly.
       - name: Trigger the Pages deploy
-        if: steps.actor.outputs.ok == 'true'
+        if: steps.commits.outputs.ok == 'true'
         run: gh workflow run docs.yml --ref main --repo "$REPO"
