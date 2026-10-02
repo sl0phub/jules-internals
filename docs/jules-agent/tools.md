@@ -33,6 +33,13 @@ This page documents the tools Jules can call to explore, modify, and manage task
 | `reply_to_pr_comments` | Replies to pull request comments. | - | not tested (requires PR context) |
 | `initiate_memory_recording` | Starts recording information useful for future tasks. | - | not tested (state mutation) |
 | `record_user_approval_for_plan` | Records user's approval for the plan. | - | not tested (mutates memory) |
+| `frontend_verification_instructions` | - | - | not tested (messages user or changes state) |
+| `frontend_verification_complete` | - | - | not tested (messages user or changes state) |
+| `grep` | - | - | not tested (messages user or changes state) |
+| `create_file_with_block` | - | - | not tested (messages user or changes state) |
+| `overwrite_file_with_block` | - | - | not tested (messages user or changes state) |
+| `call_hello_world_agent` | - | - | not tested (messages user or changes state) |
+| `done` | - | - | not tested (messages user or changes state) |
 
 ## Tool Definitions
 
