@@ -8,31 +8,31 @@
       
       
       
-        <link rel="canonical" href="https://jules-internals.aislop.ing/environment/">
+        <link rel="canonical" href="https://jules-internals.aislop.ing/jules-agent/tools/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../system_prompt/">
       
       
-        <link rel="next" href="../limits/">
+        <link rel="next" href="../../jules-vm/environment/">
       
       
         
       
       
-      <link rel="icon" href="../assets/Jules_Internals_favicon.png">
+      <link rel="icon" href="../../assets/Jules_Internals_favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Environment - Jules Internals</title>
+        <title>Tools - Jules Internals</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,9 +51,9 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#environment" class="md-skip">
+        <a href="#tools" class="md-skip">
           Skip to content
         </a>
       
@@ -94,9 +94,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Jules Internals" class="md-header__button md-logo" aria-label="Jules Internals" data-md-component="logo">
+    <a href="../.." title="Jules Internals" class="md-header__button md-logo" aria-label="Jules Internals" data-md-component="logo">
       
-  <img src="../assets/Jules_Internals_favicon.png" alt="logo">
+  <img src="../../assets/Jules_Internals_favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Environment
+              Tools
             
           </span>
         </div>
@@ -239,9 +239,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Jules Internals" class="md-nav__button md-logo" aria-label="Jules Internals" data-md-component="logo">
+    <a href="../.." title="Jules Internals" class="md-nav__button md-logo" aria-label="Jules Internals" data-md-component="logo">
       
-  <img src="../assets/Jules_Internals_favicon.png" alt="logo">
+  <img src="../../assets/Jules_Internals_favicon.png" alt="logo">
 
     </a>
     Jules Internals
@@ -268,7 +268,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -320,7 +320,7 @@
   <span class="md-ellipsis">
     
   
-    Environment
+    Jules agent
   
 
     
@@ -336,11 +336,39 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Environment
+    Jules agent
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system_prompt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Prompts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -365,7 +393,7 @@
   <span class="md-ellipsis">
     
   
-    Environment
+    Tools
   
 
     
@@ -383,7 +411,7 @@
   <span class="md-ellipsis">
     
   
-    Environment
+    Tools
   
 
     
@@ -409,10 +437,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#operating-system" class="md-nav__link">
+  <a href="#tool-verification" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Operating System
+        Tool Verification
       
     </span>
   </a>
@@ -420,68 +448,85 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hardware-and-resources" class="md-nav__link">
+  <a href="#tool-definitions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Hardware and Resources
+        Tool Definitions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tool Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-and-file-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code and File Management
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#user-permissions" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#execution-and-environment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        User Permissions
+        Execution and Environment
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#filesystem-and-working-directory" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#web-and-media" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Filesystem and Working Directory
+        Web and Media
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#programming-languages-and-toolchains" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#workflow-and-planning" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Programming Languages and Toolchains
+        Workflow and Planning
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#environment-variables" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#user-interaction-and-review" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Environment Variables
+        User Interaction and Review
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#network-access" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#memory-and-state" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Network Access
+        Memory and State
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -531,7 +576,7 @@
   <span class="md-ellipsis">
     
   
-    Limits
+    Jules vm
   
 
     
@@ -547,7 +592,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Limits
+    Jules vm
   
 
           </label>
@@ -560,14 +605,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../limits/" class="md-nav__link">
+      <a href="../../jules-vm/environment/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Limits
+    Environment
   
 
     
@@ -647,7 +692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sessions/2026-09-30-first-introspection/" class="md-nav__link">
+      <a href="../../sessions/2026-09-30-first-introspection/" class="md-nav__link">
         
   
   
@@ -668,65 +713,6 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    System prompts
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    System prompts
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
               
                 
   
@@ -734,188 +720,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../system_prompts/" class="md-nav__link">
+      <a href="../../sessions/2026-10-02-full-introspection/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    System Prompts
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tools
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Tools
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tools/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tools
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Workflow
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Workflow
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../workflow/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Workflow
+    Session: 2026-10-02 Full Introspection
   
 
     
@@ -963,10 +775,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#operating-system" class="md-nav__link">
+  <a href="#tool-verification" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Operating System
+        Tool Verification
       
     </span>
   </a>
@@ -974,68 +786,85 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hardware-and-resources" class="md-nav__link">
+  <a href="#tool-definitions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Hardware and Resources
+        Tool Definitions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tool Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-and-file-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code and File Management
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#user-permissions" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#execution-and-environment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        User Permissions
+        Execution and Environment
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#filesystem-and-working-directory" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#web-and-media" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Filesystem and Working Directory
+        Web and Media
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#programming-languages-and-toolchains" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#workflow-and-planning" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Programming Languages and Toolchains
+        Workflow and Planning
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#environment-variables" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#user-interaction-and-review" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Environment Variables
+        User Interaction and Review
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#network-access" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#memory-and-state" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Network Access
+        Memory and State
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1059,128 +888,248 @@
   
 
 
-<h1 id="environment">Environment<a class="headerlink" href="#environment" title="Permanent link">&para;</a></h1>
-<p>This page documents the environment where Jules runs.</p>
-<h2 id="operating-system">Operating System<a class="headerlink" href="#operating-system" title="Permanent link">&para;</a></h2>
-<div class="admonition success">
-<p class="admonition-title">Observed</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>uname<span class="w"> </span>-a<span class="p">;</span><span class="w"> </span>cat<span class="w"> </span>/etc/os-release
-Linux<span class="w"> </span>devbox<span class="w"> </span><span class="m">6</span>.8.0<span class="w"> </span><span class="c1">#1 SMP PREEMPT_DYNAMIC Fri Feb 20 20:38:43 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux</span>
-<span class="nv">PRETTY_NAME</span><span class="o">=</span><span class="s2">"Ubuntu 24.04.4 LTS"</span>
-<span class="nv">NAME</span><span class="o">=</span><span class="s2">"Ubuntu"</span>
-<span class="nv">VERSION_ID</span><span class="o">=</span><span class="s2">"24.04"</span>
-...
-</code></pre></div>
+<h1 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h1>
+<p>This page documents the tools Jules can call to explore, modify, and manage tasks.</p>
+<h2 id="tool-verification">Tool Verification<a class="headerlink" href="#tool-verification" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Self-reported (definition)</th>
+<th>Observed (call made and result)</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>list_files</code></td>
+<td>Lists all files and directories under the given directory.</td>
+<td>Called on <code>/tmp</code> and returned listing (<code>tool_test.txt</code>, etc).</td>
+<td>works</td>
+</tr>
+<tr>
+<td><code>read_file</code></td>
+<td>Reads the content of a specified file.</td>
+<td>Called on <code>docs/jules-agent/tools.md</code> and returned contents successfully.</td>
+<td>works</td>
+</tr>
+<tr>
+<td><code>write_file</code></td>
+<td>Creates a new file or overwrites an existing file.</td>
+<td>Called to create <code>docs/jules-vm/environment.md</code> update.</td>
+<td>works</td>
+</tr>
+<tr>
+<td><code>replace_with_git_merge_diff</code></td>
+<td>Performs a targeted search-and-replace using Git merge diff format.</td>
+<td>Called to update <code>docs/index.md</code> links.</td>
+<td>works</td>
+</tr>
+<tr>
+<td><code>delete_file</code></td>
+<td>Deletes a specified file.</td>
+<td>-</td>
+<td>not tested (changes state)</td>
+</tr>
+<tr>
+<td><code>rename_file</code></td>
+<td>Renames or moves files and directories.</td>
+<td>-</td>
+<td>not tested (changes state)</td>
+</tr>
+<tr>
+<td><code>reset_all</code></td>
+<td>Resets the entire codebase to its original state.</td>
+<td>-</td>
+<td>not tested (changes state)</td>
+</tr>
+<tr>
+<td><code>restore_file</code></td>
+<td>Restores a given file to its original state.</td>
+<td>-</td>
+<td>not tested (changes state)</td>
+</tr>
+<tr>
+<td><code>run_in_bash_session</code></td>
+<td>Runs a bash command in the sandbox.</td>
+<td>Called <code>ls</code> and <code>echo</code> successfully, also complex commands.</td>
+<td>works</td>
+</tr>
+<tr>
+<td><code>start_live_preview_instructions</code></td>
+<td>Returns instructions on how to start a live preview server.</td>
+<td>-</td>
+<td>not tested (reads help string)</td>
+</tr>
+<tr>
+<td><code>google_search</code></td>
+<td>Online search to retrieve information.</td>
+<td>-</td>
+<td>not tested (external web action)</td>
+</tr>
+<tr>
+<td><code>view_text_website</code></td>
+<td>Fetches the content of a website as plain text.</td>
+<td>Called on <code>https://jules.google/docs/environment/</code> and returned HTML text.</td>
+<td>works</td>
+</tr>
+<tr>
+<td><code>view_image</code></td>
+<td>Loads an image from a URL to view its contents.</td>
+<td>-</td>
+<td>not tested (no image handy)</td>
+</tr>
+<tr>
+<td><code>read_image_file</code></td>
+<td>Reads an image file at the filepath into context.</td>
+<td>-</td>
+<td>not tested (no image handy)</td>
+</tr>
+<tr>
+<td><code>read_media_file</code></td>
+<td>Reads a media file from the machine into context.</td>
+<td>-</td>
+<td>not tested (no media handy)</td>
+</tr>
+<tr>
+<td><code>set_plan</code></td>
+<td>Sets or updates the execution plan in Markdown format.</td>
+<td>Called to set the plan for this task.</td>
+<td>works</td>
+</tr>
+<tr>
+<td><code>plan_step_complete</code></td>
+<td>Marks a plan step as complete with an explanation message.</td>
+<td>Called to finish steps for this task.</td>
+<td>works</td>
+</tr>
+<tr>
+<td><code>request_plan_review</code></td>
+<td>Requests a review for the proposed plan.</td>
+<td>Called multiple times to get the plan approved.</td>
+<td>works</td>
+</tr>
+<tr>
+<td><code>pre_commit_instructions</code></td>
+<td>Get instructions on pre-commit steps required before submission.</td>
+<td>-</td>
+<td>not tested (will run at end of task)</td>
+</tr>
+<tr>
+<td><code>submit</code></td>
+<td>Commits the code with title/description and requests user approval to push.</td>
+<td>-</td>
+<td>not tested (ends the task)</td>
+</tr>
+<tr>
+<td><code>message_user</code></td>
+<td>Sends a message to the user.</td>
+<td>-</td>
+<td>not tested (messages user)</td>
+</tr>
+<tr>
+<td><code>request_user_input</code></td>
+<td>Asks the user a question and waits for a response.</td>
+<td>-</td>
+<td>not tested (blocks task)</td>
+</tr>
+<tr>
+<td><code>request_code_review</code></td>
+<td>Requests code review for the current change.</td>
+<td>-</td>
+<td>not tested (messages user)</td>
+</tr>
+<tr>
+<td><code>read_pr_comments</code></td>
+<td>Reads pending pull request comments.</td>
+<td>-</td>
+<td>not tested (requires PR context)</td>
+</tr>
+<tr>
+<td><code>reply_to_pr_comments</code></td>
+<td>Replies to pull request comments.</td>
+<td>-</td>
+<td>not tested (requires PR context)</td>
+</tr>
+<tr>
+<td><code>initiate_memory_recording</code></td>
+<td>Starts recording information useful for future tasks.</td>
+<td>-</td>
+<td>not tested (state mutation)</td>
+</tr>
+<tr>
+<td><code>record_user_approval_for_plan</code></td>
+<td>Records user's approval for the plan.</td>
+<td>-</td>
+<td>not tested (mutates memory)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tool-definitions">Tool Definitions<a class="headerlink" href="#tool-definitions" title="Permanent link">&para;</a></h2>
+<h3 id="code-and-file-management">Code and File Management<a class="headerlink" href="#code-and-file-management" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Self-reported</p>
+<ul>
+<li><strong><code>list_files</code></strong>: Lists all files and directories under the given directory (defaults to repo root).</li>
+<li><strong><code>read_file</code></strong>: Reads the content of a specified file.</li>
+<li><strong><code>write_file</code></strong>: Creates a new file or overwrites an existing file.</li>
+<li><strong><code>replace_with_git_merge_diff</code></strong>: Performs a targeted search-and-replace to modify an existing file using Git merge diff format.</li>
+<li><strong><code>delete_file</code></strong>: Deletes a specified file.</li>
+<li><strong><code>rename_file</code></strong>: Renames or moves files and directories.</li>
+<li><strong><code>reset_all</code></strong>: Resets the entire codebase to its original state.</li>
+<li><strong><code>restore_file</code></strong>: Restores a given file to its original state.</li>
+</ul>
 </div>
-<h2 id="hardware-and-resources">Hardware and Resources<a class="headerlink" href="#hardware-and-resources" title="Permanent link">&para;</a></h2>
-<div class="admonition success">
-<p class="admonition-title">Observed</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>nproc<span class="p">;</span><span class="w"> </span>free<span class="w"> </span>-h<span class="p">;</span><span class="w"> </span>df<span class="w"> </span>-h
-<span class="m">4</span>
-<span class="w">               </span>total<span class="w">        </span>used<span class="w">        </span>free<span class="w">      </span>shared<span class="w">  </span>buff/cache<span class="w">   </span>available
-Mem:<span class="w">           </span><span class="m">7</span>.8Gi<span class="w">       </span>375Mi<span class="w">       </span><span class="m">7</span>.0Gi<span class="w">       </span>528Ki<span class="w">       </span>696Mi<span class="w">       </span><span class="m">7</span>.4Gi
-...
-Filesystem<span class="w">               </span>Size<span class="w">  </span>Used<span class="w"> </span>Avail<span class="w"> </span>Use%<span class="w"> </span>Mounted<span class="w"> </span>on
-/dev/vdb<span class="w">                  </span>98G<span class="w">  </span>197M<span class="w">   </span>93G<span class="w">   </span><span class="m">1</span>%<span class="w"> </span>/rom/overlay
-overlayfs:/overlay/root<span class="w">   </span>98G<span class="w">  </span>197M<span class="w">   </span>93G<span class="w">   </span><span class="m">1</span>%<span class="w"> </span>/
-...
-</code></pre></div>
+<h3 id="execution-and-environment">Execution and Environment<a class="headerlink" href="#execution-and-environment" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Self-reported</p>
+<ul>
+<li><strong><code>run_in_bash_session</code></strong>: Runs a bash command in the sandbox. Used for installing dependencies, compiling code, running tests, etc.</li>
+<li><strong><code>start_live_preview_instructions</code></strong>: Returns instructions on how to start a live preview server.</li>
+</ul>
 </div>
-<p>The system provides 4 CPU cores, roughly 8GB of RAM, and about 98GB of disk space.</p>
-<h2 id="user-permissions">User Permissions<a class="headerlink" href="#user-permissions" title="Permanent link">&para;</a></h2>
-<div class="admonition success">
-<p class="admonition-title">Observed</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>whoami<span class="p">;</span><span class="w"> </span>id<span class="p">;</span><span class="w"> </span>sudo<span class="w"> </span>-n<span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"passwordless sudo"</span>
-jules
-<span class="nv">uid</span><span class="o">=</span><span class="m">1001</span><span class="o">(</span>jules<span class="o">)</span><span class="w"> </span><span class="nv">gid</span><span class="o">=</span><span class="m">1001</span><span class="o">(</span>jules<span class="o">)</span><span class="w"> </span><span class="nv">groups</span><span class="o">=</span><span class="m">1001</span><span class="o">(</span>jules<span class="o">)</span>,27<span class="o">(</span>sudo<span class="o">)</span>,103<span class="o">(</span>docker<span class="o">)</span>
-passwordless<span class="w"> </span>sudo
-</code></pre></div>
+<h3 id="web-and-media">Web and Media<a class="headerlink" href="#web-and-media" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Self-reported</p>
+<ul>
+<li><strong><code>google_search</code></strong>: Online search to retrieve information.</li>
+<li><strong><code>view_text_website</code></strong>: Fetches the content of a website as plain text.</li>
+<li><strong><code>view_image</code></strong>: Loads an image from a URL to view its contents.</li>
+<li><strong><code>read_image_file</code></strong>: Reads an image file at the filepath into context.</li>
+<li><strong><code>read_media_file</code></strong>: Reads a media file (image or video) from the machine into context.</li>
+</ul>
 </div>
-<p>Jules runs as user <code>jules</code> (uid 1001) and has passwordless <code>sudo</code> privileges.</p>
-<h2 id="filesystem-and-working-directory">Filesystem and Working Directory<a class="headerlink" href="#filesystem-and-working-directory" title="Permanent link">&para;</a></h2>
-<div class="admonition success">
-<p class="admonition-title">Observed</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>pwd<span class="p">;</span><span class="w"> </span>ls<span class="w"> </span>-la<span class="w"> </span>~<span class="p">;</span><span class="w"> </span>ls<span class="w"> </span>-la<span class="w"> </span>/
-/app
-total<span class="w"> </span><span class="m">26</span>
-drwxr-x---<span class="w">  </span><span class="m">1</span><span class="w"> </span>jules<span class="w"> </span>jules<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Sep<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">16</span>:04<span class="w"> </span>.
-drwxr-xr-x<span class="w">  </span><span class="m">1</span><span class="w"> </span>root<span class="w">  </span>root<span class="w">  </span><span class="m">4096</span><span class="w"> </span>Mar<span class="w">  </span><span class="m">4</span><span class="w">  </span><span class="m">2026</span><span class="w"> </span>..
-...
-</code></pre></div>
+<h3 id="workflow-and-planning">Workflow and Planning<a class="headerlink" href="#workflow-and-planning" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Self-reported</p>
+<ul>
+<li><strong><code>set_plan</code></strong>: Sets or updates the execution plan in Markdown format.</li>
+<li><strong><code>plan_step_complete</code></strong>: Marks a plan step as complete with an explanation message.</li>
+<li><strong><code>request_plan_review</code></strong>: Requests a review for the proposed plan before using <code>set_plan</code>.</li>
+<li><strong><code>pre_commit_instructions</code></strong>: Get instructions on pre-commit steps required before submission.</li>
+<li><strong><code>submit</code></strong>: Commits the code with title/description and requests user approval to push.</li>
+</ul>
 </div>
-<p>The default working directory is <code>/app</code>. The home directory (<code>/home/jules</code>) contains various toolchain configurations (<code>.cargo</code>, <code>.nvm</code>, <code>.pyenv</code>, etc.).</p>
-<h2 id="programming-languages-and-toolchains">Programming Languages and Toolchains<a class="headerlink" href="#programming-languages-and-toolchains" title="Permanent link">&para;</a></h2>
-<div class="admonition success">
-<p class="admonition-title">Observed</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>python3<span class="w"> </span>--version<span class="p">;</span><span class="w"> </span>node<span class="w"> </span>--version<span class="p">;</span><span class="w"> </span>go<span class="w"> </span>version<span class="p">;</span><span class="w"> </span>java<span class="w"> </span>-version<span class="p">;</span><span class="w"> </span>rustc<span class="w"> </span>--version
-Python<span class="w"> </span><span class="m">3</span>.12.13
-v22.22.1
-go<span class="w"> </span>version<span class="w"> </span>go1.24.3<span class="w"> </span>linux/amd64
-rustc<span class="w"> </span><span class="m">1</span>.94.0<span class="w"> </span><span class="o">(</span>4a4ef493e<span class="w"> </span><span class="m">2026</span>-03-02<span class="o">)</span>
-<span class="w"> </span>openjdk<span class="w"> </span>version<span class="w"> </span><span class="s2">"21.0.10"</span><span class="w"> </span><span class="m">2026</span>-01-20
-</code></pre></div>
+<h3 id="user-interaction-and-review">User Interaction and Review<a class="headerlink" href="#user-interaction-and-review" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Self-reported</p>
+<ul>
+<li><strong><code>message_user</code></strong>: Sends a message to the user.</li>
+<li><strong><code>request_user_input</code></strong>: Asks the user a question and waits for a response.</li>
+<li><strong><code>request_code_review</code></strong>: Requests code review for the current change.</li>
+<li><strong><code>read_pr_comments</code></strong>: Reads pending pull request comments.</li>
+<li><strong><code>reply_to_pr_comments</code></strong>: Replies to pull request comments.</li>
+</ul>
 </div>
-<p>Available languages and versions:
-- Python 3.12.13
-- Node.js v22.22.1
-- Go 1.24.3
-- Rust 1.94.0
-- Java 21.0.10</p>
-<h2 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h2>
-<div class="admonition success">
-<p class="admonition-title">Observed</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>env<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="o">=</span><span class="w"> </span>-f1<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort
-ANDROID_HOME
-BUN_INSTALL
-CHROME_EXECUTABLE
-DEBUGINFOD_URLS
-DOTNET_BUNDLE_EXTRACT_BASE_DIR
-DOTNET_ROOT
-FLUTTER_HOME
-GIT_TERMINAL_PROMPT
-HOME
-JAVA_HOME
-JULES_SESSION_ID
-LANG
-LESSCLOSE
-LESSOPEN
-LOGNAME
-LS_COLORS
-MAIL
-NVM_BIN
-NVM_CD_FLAGS
-NVM_DIR
-NVM_INC
-OLDPWD
-PATH
-PWD
-SHELL
-SHLVL
-SUDO_COMMAND
-SUDO_GID
-SUDO_UID
-SUDO_USER
-TERM
-TERM_PROGRAM
-TERM_PROGRAM_VERSION
-TMUX
-TMUX_PANE
-USER
-_
-</code></pre></div>
+<h3 id="memory-and-state">Memory and State<a class="headerlink" href="#memory-and-state" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Self-reported</p>
+<ul>
+<li><strong><code>initiate_memory_recording</code></strong>: Starts recording information useful for future tasks.</li>
+<li><strong><code>record_user_approval_for_plan</code></strong>: Records user's approval for the plan.</li>
+</ul>
 </div>
-<h2 id="network-access">Network Access<a class="headerlink" href="#network-access" title="Permanent link">&para;</a></h2>
-<div class="admonition success">
-<p class="admonition-title">Observed</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>curl<span class="w"> </span>-I<span class="w"> </span>https://google.com
-HTTP/2<span class="w"> </span><span class="m">301</span>
-location:<span class="w"> </span>https://www.google.com/
-content-type:<span class="w"> </span>text/html<span class="p">;</span><span class="w"> </span><span class="nv">charset</span><span class="o">=</span>UTF-8
-...
-</code></pre></div>
-</div>
-<p>The environment has outbound internet access.</p>
-<p><em>Last verified: 2026-09-30 (Jules session)</em></p>
+<p><em>Last verified: 2026-10-02 (Jules session)</em></p>
 
 
 
@@ -1236,10 +1185,10 @@ content-type:<span class="w"> </span>text/html<span class="p">;</span><span clas
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
