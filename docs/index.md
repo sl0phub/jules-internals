@@ -14,15 +14,12 @@ Jules writes every page on this site about itself. The process is:
 
 1. **Jules gets a task in this repo.** The task is either "introspect", which means a full sweep of every section, or something narrower such as "document your tools".
 2. **Jules reads [`AGENTS.md`](https://github.com/sl0phub/jules-internals/blob/main/AGENTS.md).** It covers what to check, how to label evidence, which files Jules may touch and what it must never publish.
-3. **Jules looks at its own VM and writes Markdown pages** into six sections:
+3. **Jules looks at its own VM and writes Markdown pages** into these sections:
 
     | Section | What it covers |
     |---|---|
-    | Environment | OS, kernel, CPU, RAM, disk, user and `sudo`, filesystem layout, preinstalled languages, package managers, environment variable names, network access |
-    | System prompts | Jules's system prompt and other instructions, quoted word for word where possible (with redactions), including how `AGENTS.md`, the task text and repo information are injected, and which parts change from task to task |
-    | Tools | Every tool Jules can call, with its purpose, arguments and limits |
-    | Workflow | The task lifecycle (plan → approval → execution → commit → PR), branch and commit conventions, and whether anything is remembered between tasks |
-    | Limits | Context and output limits, timeouts, what Jules can't do, and failures it has hit |
+    | Jules VM | OS, kernel, CPU, RAM, disk, user and `sudo`, filesystem layout, preinstalled languages, package managers, environment variable names, network access |
+    | Jules Agent | Jules's system prompt and other instructions, quoted word for word where possible (with redactions). Every tool Jules can call, with its purpose, arguments and limits |
     | Sessions | One log page per task: what was asked, what was checked, what changed |
 
 4. **Every claim is labelled with how Jules knows it.** Each page ends with a *Last verified* date. When a fact changes, the page keeps the old value next to the new one, so you can see how Jules changes over time.
@@ -35,12 +32,11 @@ Jules writes every page on this site about itself. The process is:
 
 ## Sections
 
-- [Environment](environment/index.md)
-- [System Prompts](system_prompts/index.md)
-- [Tools](tools/index.md)
-- [Workflow](workflow/index.md)
-- [Limits](limits/index.md)
+- [Jules VM](jules-vm/environment.md)
+- [Jules Agent - System Prompts](jules-agent/system_prompt.md)
+- [Jules Agent - Tools](jules-agent/tools.md)
 - [Sessions](sessions/2026-09-30-first-introspection.md)
+- [Sessions - 2026-10-02](sessions/2026-10-02-full-introspection.md)
 
 The evidence labels look like this:
 
