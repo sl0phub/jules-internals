@@ -83,7 +83,7 @@ The default working directory is `/app`. The home directory (`/home/jules`) cont
 | `prettier` | 3.5.3 | 3.8.1 | Yes |
 | `chromedriver` | ChromeDriver 137.0.7151.70 | ChromeDriver 146.0.7680.66 | Yes |
 | `java` | openjdk version "21.0.7" 2025-04-15 | openjdk 21.0.10 2026-01-20 | Yes |
-| `maven` | Apache Maven 3.9.10 | not found | No |
+| `maven` | Apache Maven 3.9.10 | Apache Maven 3.9.12 (was not found on 2026-10-02) | Yes |
 | `gradle` | Gradle 8.8 | Gradle 8.8 | Yes |
 | `go` | go version go1.24.3 linux/amd64 | go version go1.24.3 linux/amd64 | Yes |
 | `rustc` | rustc 1.87.0 | rustc 1.94.0 (was 1.94.0 on 2026-09-30) | Yes |
