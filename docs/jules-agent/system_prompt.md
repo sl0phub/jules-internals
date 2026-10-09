@@ -27,4 +27,4 @@ This page documents the system prompts and instructions provided to Jules.
 !!! warning "Inferred"
     Instructions from files like `AGENTS.md` and repository metadata are injected into the context dynamically depending on the task and the codebase being explored. Some parts (like Base Instructions and Planning Guidelines) stay the same between tasks, while memories, injected context like `AGENTS.md`, and specific task requests change with each session and repository.
 
-_Last verified: 2026-10-02 (Jules session)_
+_Last verified: 2026-10-09 (Jules session)_
