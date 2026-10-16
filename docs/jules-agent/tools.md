@@ -33,13 +33,13 @@ This page documents the tools Jules can call to explore, modify, and manage task
 | `reply_to_pr_comments` | Replies to pull request comments. | - | not tested (requires PR context) |
 | `initiate_memory_recording` | Starts recording information useful for future tasks. | - | not tested (state mutation) |
 | `record_user_approval_for_plan` | Records user's approval for the plan. | - | not tested (mutates memory) |
-| `frontend_verification_instructions` | - | - | not tested (messages user or changes state) |
-| `frontend_verification_complete` | - | - | not tested (messages user or changes state) |
-| `grep` | - | - | not tested (messages user or changes state) |
-| `create_file_with_block` | - | - | not tested (messages user or changes state) |
-| `overwrite_file_with_block` | - | - | not tested (messages user or changes state) |
-| `call_hello_world_agent` | - | - | not tested (messages user or changes state) |
-| `done` | - | - | not tested (messages user or changes state) |
+| `frontend_verification_instructions` | Returns instructions on how to write a Playwright script to verify frontend web applications and generate screenshots of your changes. | - | not tested |
+| `frontend_verification_complete` | Use this tool to indicate that the frontend changes have been verified. | - | not tested |
+| `grep` | (Deprecated) This tool is deprecated - use grep with run_in_bash_session instead. | - | deprecated |
+| `create_file_with_block` | (Deprecated) This tool is deprecated - use write_file instead. | - | deprecated |
+| `overwrite_file_with_block` | (Deprecated) This tool is deprecated - use write_file instead. | - | deprecated |
+| `call_hello_world_agent` | Calls the Hello World Agency agent with a message and returns its response. Use this for testing Agency agent integration. | - | not tested |
+| `done` | Indicates that the subagent has completed its task. Call this with a summary of what was accomplished. | - | not tested |
 
 ## Tool Definitions
 
@@ -78,6 +78,10 @@ This page documents the tools Jules can call to explore, modify, and manage task
     - **`request_plan_review`**: Requests a review for the proposed plan before using `set_plan`.
     - **`pre_commit_instructions`**: Get instructions on pre-commit steps required before submission.
     - **`submit`**: Commits the code with title/description and requests user approval to push.
+    - **`frontend_verification_instructions`**: Returns instructions on how to write a Playwright script to verify frontend web applications.
+    - **`frontend_verification_complete`**: Use this tool to indicate that the frontend changes have been verified.
+    - **`call_hello_world_agent`**: Calls the Hello World Agency agent for testing integration.
+    - **`done`**: Indicates that the subagent has completed its task.
 
 ### User Interaction and Review
 
@@ -94,4 +98,4 @@ This page documents the tools Jules can call to explore, modify, and manage task
     - **`initiate_memory_recording`**: Starts recording information useful for future tasks.
     - **`record_user_approval_for_plan`**: Records user's approval for the plan.
 
-_Last verified: 2026-10-09 (Jules session)_
+_Last verified: 2026-10-16 (Jules session)_
