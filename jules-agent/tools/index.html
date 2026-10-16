@@ -797,6 +797,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sessions/2026-10-16-full-introspection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Session 2026-10-16
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1121,45 +1149,45 @@
 </tr>
 <tr>
 <td><code>frontend_verification_instructions</code></td>
+<td>Returns instructions on how to write a Playwright script to verify frontend web applications and generate screenshots of your changes.</td>
 <td>-</td>
-<td>-</td>
-<td>not tested (messages user or changes state)</td>
+<td>not tested</td>
 </tr>
 <tr>
 <td><code>frontend_verification_complete</code></td>
+<td>Use this tool to indicate that the frontend changes have been verified.</td>
 <td>-</td>
-<td>-</td>
-<td>not tested (messages user or changes state)</td>
+<td>not tested</td>
 </tr>
 <tr>
 <td><code>grep</code></td>
+<td>(Deprecated) This tool is deprecated - use grep with run_in_bash_session instead.</td>
 <td>-</td>
-<td>-</td>
-<td>not tested (messages user or changes state)</td>
+<td>deprecated</td>
 </tr>
 <tr>
 <td><code>create_file_with_block</code></td>
+<td>(Deprecated) This tool is deprecated - use write_file instead.</td>
 <td>-</td>
-<td>-</td>
-<td>not tested (messages user or changes state)</td>
+<td>deprecated</td>
 </tr>
 <tr>
 <td><code>overwrite_file_with_block</code></td>
+<td>(Deprecated) This tool is deprecated - use write_file instead.</td>
 <td>-</td>
-<td>-</td>
-<td>not tested (messages user or changes state)</td>
+<td>deprecated</td>
 </tr>
 <tr>
 <td><code>call_hello_world_agent</code></td>
+<td>Calls the Hello World Agency agent with a message and returns its response. Use this for testing Agency agent integration.</td>
 <td>-</td>
-<td>-</td>
-<td>not tested (messages user or changes state)</td>
+<td>not tested</td>
 </tr>
 <tr>
 <td><code>done</code></td>
+<td>Indicates that the subagent has completed its task. Call this with a summary of what was accomplished.</td>
 <td>-</td>
-<td>-</td>
-<td>not tested (messages user or changes state)</td>
+<td>not tested</td>
 </tr>
 </tbody>
 </table>
@@ -1206,6 +1234,10 @@
 <li><strong><code>request_plan_review</code></strong>: Requests a review for the proposed plan before using <code>set_plan</code>.</li>
 <li><strong><code>pre_commit_instructions</code></strong>: Get instructions on pre-commit steps required before submission.</li>
 <li><strong><code>submit</code></strong>: Commits the code with title/description and requests user approval to push.</li>
+<li><strong><code>frontend_verification_instructions</code></strong>: Returns instructions on how to write a Playwright script to verify frontend web applications.</li>
+<li><strong><code>frontend_verification_complete</code></strong>: Use this tool to indicate that the frontend changes have been verified.</li>
+<li><strong><code>call_hello_world_agent</code></strong>: Calls the Hello World Agency agent for testing integration.</li>
+<li><strong><code>done</code></strong>: Indicates that the subagent has completed its task.</li>
 </ul>
 </div>
 <h3 id="user-interaction-and-review">User Interaction and Review<a class="headerlink" href="#user-interaction-and-review" title="Permanent link">&para;</a></h3>
@@ -1227,7 +1259,7 @@
 <li><strong><code>record_user_approval_for_plan</code></strong>: Records user's approval for the plan.</li>
 </ul>
 </div>
-<p><em>Last verified: 2026-10-09 (Jules session)</em></p>
+<p><em>Last verified: 2026-10-16 (Jules session)</em></p>
 
 
 

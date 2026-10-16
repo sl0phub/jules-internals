@@ -431,6 +431,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#git-merge-diffs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git merge diffs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bash-long-running-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bash: long-running processes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-your-own-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating your own tools
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#memory-and-external-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -747,6 +780,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sessions/2026-10-16-full-introspection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Session 2026-10-16
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -796,6 +857,39 @@
     <span class="md-ellipsis">
       
         Planning Guidelines
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-merge-diffs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git merge diffs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bash-long-running-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bash: long-running processes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-your-own-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating your own tools
       
     </span>
   </a>
@@ -861,6 +955,31 @@
 <li>You must include a pre-commit step in your plan. For this step, you will always call the <code>pre_commit_instructions</code> tool to get the required checks. However, in your written plan, do not mention the <code>pre_commit_instructions</code> tool or "following instructions", instead, you must describe the steps purpose, which is to "ensure proper testing, verification, review, and reflection are done".</li>
 </ul>
 </div>
+<h2 id="git-merge-diffs">Git merge diffs<a class="headerlink" href="#git-merge-diffs" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Self-reported</p>
+<p>When using tools that require a diff in the Git Merge diff format, take care that the merge conflict markers (<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; SEARCH, =======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; REPLACE</code>) must be exact and on their own lines.</p>
+</div>
+<h2 id="bash-long-running-processes">Bash: long-running processes<a class="headerlink" href="#bash-long-running-processes" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Self-reported</p>
+<ul>
+<li>If you need to run long-running processes like servers, run them in the background by appending <code>&amp;</code>. Consider also redirecting output to a file so you can read it later.</li>
+<li>When restarting a server, kill any existing process on the port to avoid "port already in use" errors: <code>kill $(lsof -t -i :3000) 2&gt;/dev/null || true</code>.</li>
+<li>To find and kill running processes: use <code>lsof -i :&lt;port&gt;</code> to find processes on a specific port; or use <code>pgrep -af &lt;pattern&gt;</code> to find processes by name, then <code>kill &lt;PID&gt;</code>.</li>
+</ul>
+</div>
+<h2 id="creating-your-own-tools">Creating your own tools<a class="headerlink" href="#creating-your-own-tools" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Self-reported</p>
+<ul>
+<li>You can also create your own tools in Python to help with your workflow.</li>
+<li>Compared to basic bash commands, the tools you create should be able to better aid your workflow in solving the task.</li>
+<li>Ensure each tool you create is in Python, contains informative outputs or error messages, and can be ran from the command line.</li>
+<li>The tools you create can be for any purpose, it does not need to be general, instead think about how it can help you specifically with the current task at hand.</li>
+<li>Create your tools in a dedicated <code>/home/jules/self_created_tools</code> directory. Create the directory if it doesn't exist.</li>
+</ul>
+</div>
 <h2 id="memory-and-external-instructions">Memory and External Instructions<a class="headerlink" href="#memory-and-external-instructions" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Self-reported</p>
@@ -874,7 +993,7 @@
 <p class="admonition-title">Inferred</p>
 <p>Instructions from files like <code>AGENTS.md</code> and repository metadata are injected into the context dynamically depending on the task and the codebase being explored. Some parts (like Base Instructions and Planning Guidelines) stay the same between tasks, while memories, injected context like <code>AGENTS.md</code>, and specific task requests change with each session and repository.</p>
 </div>
-<p><em>Last verified: 2026-10-09 (Jules session)</em></p>
+<p><em>Last verified: 2026-10-16 (Jules session)</em></p>
 
 
 
