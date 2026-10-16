@@ -23,11 +23,12 @@ This page documents the environment where Jules runs.
     $ nproc; free -h; df -h
     4
                    total        used        free      shared  buff/cache   available
-    Mem:           7.8Gi       393Mi       6.5Gi       528Ki       1.2Gi       7.4Gi
-    ...
+    Mem:           7.8Gi       374Mi       7.0Gi       528Ki       699Mi       7.4Gi
+    Swap:             0B          0B          0B
     Filesystem               Size  Used Avail Use% Mounted on
-    /dev/vdb                  98G  212M   93G   1% /rom/overlay
-    overlayfs:/overlay/root   98G  212M   93G   1% /
+    /dev/vdb                  98G  197M   93G   1% /rom/overlay
+    overlayfs:/overlay/root   98G  197M   93G   1% /
+    tmpfs                    3.9G     0  3.9G   0% /dev/shm
     ...
     ```
 
@@ -107,7 +108,7 @@ The default working directory is `/app`. The home directory (`/home/jules`) cont
 | `tmux` | tmux 3.4 | tmux 3.4 (was not found on 2026-10-02) | Yes |
 | `yq` | yq 0.0.0 | yq 0.0.0 | Yes |
 
-*Official docs last fetched: 2026-10-09*
+*Official docs last fetched: 2026-10-16*
 
 ??? note "Full output"
     ```bash
@@ -178,4 +179,4 @@ The default working directory is `/app`. The home directory (`/home/jules`) cont
 
 The environment has outbound internet access.
 
-_Last verified: 2026-10-09 (Jules session)_
+_Last verified: 2026-10-16 (Jules session)_
