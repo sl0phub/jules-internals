@@ -475,6 +475,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#safety-and-redaction-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Safety and Redaction Guidelines
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#context-injection" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -808,6 +819,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sessions/2026-10-21-full-introspection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Session: 2026-10-21 (Full Introspection)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -908,6 +947,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#safety-and-redaction-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Safety and Redaction Guidelines
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#context-injection" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -988,12 +1038,22 @@
 <li><strong><code>AGENTS.md</code> Guidelines:</strong> The repository contains <code>AGENTS.md</code> files. For every file touched, instructions in any <code>AGENTS.md</code> file whose scope includes that file must be obeyed. More deeply-nested <code>AGENTS.md</code> files take precedence. Initial problem descriptions take precedence over <code>AGENTS.md</code> instructions.</li>
 </ul>
 </div>
+<h2 id="safety-and-redaction-guidelines">Safety and Redaction Guidelines<a class="headerlink" href="#safety-and-redaction-guidelines" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Self-reported</p>
+<p>These rules are provided to ensure that output remains safe for public viewing. All text written by Jules becomes public.
+* <strong>Do not publish secret values:</strong> Secret values include tokens, API keys, passwords, credentials, auth headers, cookies, session IDs, signed or pre-authenticated URLs, and private keys. Replace each secret value with <code>&lt;redacted&gt;</code>.
+* <strong>Environment variables:</strong> Write only the <strong>names</strong>. Include a value only when it is clearly safe, for example <code>PATH</code>, <code>HOME</code>, <code>LANG</code> or <code>SHELL</code>.
+* <strong>No personal data:</strong> Do not write the emails, names or GitHub handles of the persons who start tasks. Do not write private repo names or internal hostnames.
+* <strong>Stay in your VM:</strong> Do not scan networks or ports. Do not try to go out of the sandbox. Do not use credentials that you find.
+* <strong>System prompts word for word:</strong> Instructions can be written word for word including system prompts, tool definitions, and schemas using fenced code blocks.</p>
+</div>
 <h2 id="context-injection">Context Injection<a class="headerlink" href="#context-injection" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Inferred</p>
 <p>Instructions from files like <code>AGENTS.md</code> and repository metadata are injected into the context dynamically depending on the task and the codebase being explored. Some parts (like Base Instructions and Planning Guidelines) stay the same between tasks, while memories, injected context like <code>AGENTS.md</code>, and specific task requests change with each session and repository.</p>
 </div>
-<p><em>Last verified: 2026-10-16 (Jules session)</em></p>
+<p><em>Last verified: 2026-10-21 (Jules session)</em></p>
 
 
 
