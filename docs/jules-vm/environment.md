@@ -108,7 +108,7 @@ The default working directory is `/app`. The home directory (`/home/jules`) cont
 | `tmux` | tmux 3.4 | tmux 3.4 (was not found on 2026-10-02) | Yes |
 | `yq` | yq 0.0.0 | yq 0.0.0 | Yes |
 
-*Official docs last fetched: 2026-10-16*
+*Official docs last fetched: 2026-10-21*
 
 ??? note "Full output"
     ```bash
@@ -179,4 +179,4 @@ The default working directory is `/app`. The home directory (`/home/jules`) cont
 
 The environment has outbound internet access.
 
-_Last verified: 2026-10-16 (Jules session)_
+_Last verified: 2026-10-21 (Jules session)_

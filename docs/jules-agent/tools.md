@@ -98,4 +98,4 @@ This page documents the tools Jules can call to explore, modify, and manage task
     - **`initiate_memory_recording`**: Starts recording information useful for future tasks.
     - **`record_user_approval_for_plan`**: Records user's approval for the plan.
 
-_Last verified: 2026-10-16 (Jules session)_
+_Last verified: 2026-10-21 (Jules session)_
