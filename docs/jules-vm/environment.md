@@ -76,7 +76,7 @@ The default working directory is `/app`. The home directory (`/home/jules`) cont
 | `ruff` | ruff 0.12.0 | ruff 0.15.5 | Yes |
 | `pyenv` | available | pyenv 2.6.25 | Yes |
 | `node` | v22.16.0 | v22.22.1 | Yes |
-| `nvm` | available | 0.40.3 (was not found on 2026-10-02) | Yes |
+| `nvm` | available | 0.40.3 | Yes |
 | `npm` | 11.4.2 | 11.11.0 | Yes |
 | `yarn` | 1.22.22 | 1.22.22 | Yes |
 | `pnpm` | 10.12.1 | 10.30.3 | Yes |
@@ -84,10 +84,10 @@ The default working directory is `/app`. The home directory (`/home/jules`) cont
 | `prettier` | 3.5.3 | 3.8.1 | Yes |
 | `chromedriver` | ChromeDriver 137.0.7151.70 | ChromeDriver 146.0.7680.66 | Yes |
 | `java` | openjdk version "21.0.7" 2025-04-15 | openjdk 21.0.10 2026-01-20 | Yes |
-| `maven` | Apache Maven 3.9.10 | Apache Maven 3.9.12 (was not found on 2026-10-02) | Yes |
+| `maven` | Apache Maven 3.9.10 | Apache Maven 3.9.12 | Yes |
 | `gradle` | Gradle 8.8 | Gradle 8.8 | Yes |
 | `go` | go version go1.24.3 linux/amd64 | go version go1.24.3 linux/amd64 | Yes |
-| `rustc` | rustc 1.87.0 | rustc 1.94.0 (was 1.94.0 on 2026-09-30) | Yes |
+| `rustc` | rustc 1.87.0 | rustc 1.94.0 | Yes |
 | `cargo` | cargo 1.87.0 | cargo 1.94.0 | Yes |
 | `clang` | Ubuntu clang version 18.1.3 (1ubuntu1) | Ubuntu clang version 18.1.3 (1ubuntu1) | Yes |
 | `gcc` | gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0 | gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0 | Yes |
@@ -105,10 +105,10 @@ The default working directory is `/app`. The home directory (`/home/jules`) cont
 | `rg` | ripgrep 14.1.0 | ripgrep 14.1.0 | Yes |
 | `sed` | sed (GNU sed) 4.9 | sed (GNU sed) 4.9 | Yes |
 | `tar` | tar (GNU tar) 1.35 | tar (GNU tar) 1.35 | Yes |
-| `tmux` | tmux 3.4 | tmux 3.4 (was not found on 2026-10-02) | Yes |
+| `tmux` | tmux 3.4 | tmux 3.4 | Yes |
 | `yq` | yq 0.0.0 | yq 0.0.0 | Yes |
 
-*Official docs last fetched: 2026-10-23*
+*Official docs last fetched: 2026-10-30*
 
 ??? note "Full output"
     ```bash
@@ -179,4 +179,4 @@ The default working directory is `/app`. The home directory (`/home/jules`) cont
 
 The environment has outbound internet access.
 
-_Last verified: 2026-10-23 (Jules session)_
+_Last verified: 2026-10-30 (Jules session)_

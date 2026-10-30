@@ -97,5 +97,12 @@ This page documents the tools Jules can call to explore, modify, and manage task
 !!! info "Self-reported"
     - **`initiate_memory_recording`**: Starts recording information useful for future tasks.
     - **`record_user_approval_for_plan`**: Records user's approval for the plan.
+    - **`frontend_verification_instructions`**: Returns instructions on how to write a Playwright script to verify frontend web applications.
+    - **`frontend_verification_complete`**: Use this tool to indicate that the frontend changes have been verified.
+    - **`grep`**: (Deprecated) This tool is deprecated - use grep with run_in_bash_session instead.
+    - **`create_file_with_block`**: (Deprecated) This tool is deprecated - use write_file instead.
+    - **`overwrite_file_with_block`**: (Deprecated) This tool is deprecated - use write_file instead.
+    - **`call_hello_world_agent`**: Calls the Hello World Agency agent for testing integration.
+    - **`done`**: Indicates that the subagent has completed its task.
 
-_Last verified: 2026-10-23 (Jules session)_
+_Last verified: 2026-10-30 (Jules session)_
