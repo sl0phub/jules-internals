@@ -23,11 +23,11 @@ This page documents the environment where Jules runs.
     $ nproc; free -h; df -h
     4
                    total        used        free      shared  buff/cache   available
-    Mem:           7.8Gi       374Mi       7.0Gi       528Ki       699Mi       7.4Gi
+    Mem:           7.8Gi       390Mi       6.9Gi       528Ki       702Mi       7.4Gi
     Swap:             0B          0B          0B
     Filesystem               Size  Used Avail Use% Mounted on
-    /dev/vdb                  98G  197M   93G   1% /rom/overlay
-    overlayfs:/overlay/root   98G  197M   93G   1% /
+    /dev/vdb                  98G  204M   93G   1% /rom/overlay
+    overlayfs:/overlay/root   98G  204M   93G   1% /
     tmpfs                    3.9G     0  3.9G   0% /dev/shm
     ...
     ```
@@ -52,8 +52,8 @@ Jules runs as user `jules` (uid 1001) and has passwordless `sudo` privileges.
     ```bash
     $ pwd; ls -la ~; ls -la /
     /app
-    total 38
-    drwxr-x---  1 jules jules 4096 Oct  2 15:36 .
+    total 26
+    drwxr-x---  1 jules jules 4096 Nov  6 16:17 .
     drwxr-xr-x  1 root  root  4096 Mar  4  2026 ..
     ...
     ```
@@ -108,7 +108,7 @@ The default working directory is `/app`. The home directory (`/home/jules`) cont
 | `tmux` | tmux 3.4 | tmux 3.4 | Yes |
 | `yq` | yq 0.0.0 | yq 0.0.0 | Yes |
 
-*Official docs last fetched: 2026-10-30*
+*Official docs last fetched: 2026-11-06 (was 2026-10-30 on 2026-10-30)*
 
 ??? note "Full output"
     ```bash
@@ -179,4 +179,4 @@ The default working directory is `/app`. The home directory (`/home/jules`) cont
 
 The environment has outbound internet access.
 
-_Last verified: 2026-10-30 (Jules session)_
+_Last verified: 2026-11-06 (was 2026-10-30 on 2026-10-30) (Jules session)_
