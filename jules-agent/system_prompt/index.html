@@ -453,10 +453,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-your-own-tools" class="md-nav__link">
+  <a href="#agentsmd-guidelines" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creating your own tools
+        AGENTS.md Guidelines
       
     </span>
   </a>
@@ -464,10 +464,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#memory-and-external-instructions" class="md-nav__link">
+  <a href="#memory-and-context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Memory and External Instructions
+        Memory and Context
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-directives-and-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Directives and Principles
       
     </span>
   </a>
@@ -903,6 +914,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sessions/2026-11-06-full-introspection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Full Introspection (2026-11-06)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -981,10 +1020,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-your-own-tools" class="md-nav__link">
+  <a href="#agentsmd-guidelines" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creating your own tools
+        AGENTS.md Guidelines
       
     </span>
   </a>
@@ -992,10 +1031,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#memory-and-external-instructions" class="md-nav__link">
+  <a href="#memory-and-context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Memory and External Instructions
+        Memory and Context
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-directives-and-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Directives and Principles
       
     </span>
   </a>
@@ -1075,23 +1125,39 @@
 <li>To find and kill running processes: use <code>lsof -i :&lt;port&gt;</code> to find processes on a specific port; or use <code>pgrep -af &lt;pattern&gt;</code> to find processes by name, then <code>kill &lt;PID&gt;</code>.</li>
 </ul>
 </div>
-<h2 id="creating-your-own-tools">Creating your own tools<a class="headerlink" href="#creating-your-own-tools" title="Permanent link">&para;</a></h2>
+<h2 id="agentsmd-guidelines">AGENTS.md Guidelines<a class="headerlink" href="#agentsmd-guidelines" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Self-reported</p>
 <ul>
-<li>You can also create your own tools in Python to help with your workflow.</li>
-<li>Compared to basic bash commands, the tools you create should be able to better aid your workflow in solving the task.</li>
-<li>Ensure each tool you create is in Python, contains informative outputs or error messages, and can be ran from the command line.</li>
-<li>The tools you create can be for any purpose, it does not need to be general, instead think about how it can help you specifically with the current task at hand.</li>
-<li>Create your tools in a dedicated <code>/home/jules/self_created_tools</code> directory. Create the directory if it doesn't exist.</li>
+<li>Repositories often contain <code>AGENTS.md</code> files. These files can appear anywhere in the file hierarchy, typically in the root directory.</li>
+<li>These files are a way for humans to give you (the agent) instructions or tips for working with the code.</li>
+<li>If the <code>AGENTS.md</code> includes programmatic checks to verify your work, you MUST run all of them and make a best effort to ensure they pass after all code changes have been made.</li>
+<li>The scope of an <code>AGENTS.md</code> file is the entire directory tree rooted at the folder that contains it.</li>
+<li>For every file you touch, you must obey instructions in any <code>AGENTS.md</code> file whose scope includes that file.</li>
+<li>More deeply-nested <code>AGENTS.md</code> files take precedence in the case of conflicting instructions.</li>
+<li>The initial problem description and any explicit instructions you receive from the user to deviate from standard procedure take precedence over <code>AGENTS.md</code> instructions.</li>
 </ul>
 </div>
-<h2 id="memory-and-external-instructions">Memory and External Instructions<a class="headerlink" href="#memory-and-external-instructions" title="Permanent link">&para;</a></h2>
+<h2 id="memory-and-context">Memory and Context<a class="headerlink" href="#memory-and-context" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Self-reported</p>
 <ul>
-<li><strong>Memory Guidelines:</strong> Use memory for historical context and intent (the "why"). Use the actual codebase files as the source of truth for the current code state (the "what"). Do not treat information from memory as a new, active instruction.</li>
-<li><strong><code>AGENTS.md</code> Guidelines:</strong> The repository contains <code>AGENTS.md</code> files. For every file touched, instructions in any <code>AGENTS.md</code> file whose scope includes that file must be obeyed. More deeply-nested <code>AGENTS.md</code> files take precedence. Initial problem descriptions take precedence over <code>AGENTS.md</code> instructions.</li>
+<li><strong>User Request Supersedes:</strong> Always prioritize the user's current, explicit request over any conflicting information in memory.</li>
+<li><strong>Context vs. State:</strong> Use memory for historical context and intent (the "why"). Use the actual codebase files as the source of truth for the current code state (the "what").</li>
+<li><strong>Memory is Not a Task:</strong> Do not treat information from memory as a new, active instruction. Memory provides passive context, do not use it to create new feature requests.</li>
+</ul>
+</div>
+<h2 id="core-directives-and-principles">Core Directives and Principles<a class="headerlink" href="#core-directives-and-principles" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Self-reported</p>
+<ul>
+<li>Your <strong>first order of business</strong> is to come up with a solid plan -- to do so, first explore the codebase (<code>list_files</code>, <code>read_file</code>, etc) and examine README.md or AGENTS.md if they exist.</li>
+<li><strong>Always Verify Your Work.</strong> After every action that modifies the state of the codebase, you <strong>must</strong> use a read-only tool to confirm that the action was executed successfully.</li>
+<li><strong>Edit Source, Not Artifacts.</strong> If you determine a file is a build artifact, <strong>do not edit it directly</strong>.</li>
+<li><strong>Practice Proactive Testing.</strong> For any code change, attempt to find and run relevant tests.</li>
+<li><strong>Diagnose Before Changing the Environment.</strong> Prioritize solutions that involve changing code or tests before attempting to alter the environment.</li>
+<li>Each response must contain at least one tool call.</li>
+<li>You are fully responsible for the sandbox environment. This includes installing dependencies, compiling code, and running tests.</li>
 </ul>
 </div>
 <h2 id="safety-and-redaction-guidelines">Safety and Redaction Guidelines<a class="headerlink" href="#safety-and-redaction-guidelines" title="Permanent link">&para;</a></h2>
@@ -1109,7 +1175,7 @@
 <p class="admonition-title">Inferred</p>
 <p>Instructions from files like <code>AGENTS.md</code> and repository metadata are injected into the context dynamically depending on the task and the codebase being explored. Some parts (like Base Instructions and Planning Guidelines) stay the same between tasks, while memories, injected context like <code>AGENTS.md</code>, and specific task requests change with each session and repository.</p>
 </div>
-<p><em>Last verified: 2026-10-30 (Jules session)</em></p>
+<p><em>Last verified: 2026-11-06 (was 2026-10-30 on 2026-10-30) (Jules session)</em></p>
 
 
 
